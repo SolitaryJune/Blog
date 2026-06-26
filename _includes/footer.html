@@ -97,14 +97,7 @@
                 </ul>
 
                 <p class="copyright text-muted">
-                    <span id="busuanzi_container_site_pv">本站总访问量<span id="fix_site_pv"></span>次<span id="busuanzi_value_site_pv" style="display: none;"></span></span>
-                    <span id="busuanzi_container_site_uv">访客数<span id="fix_site_uv"></span>人<span id="busuanzi_value_site_uv" style="display: none;"></span></span>
-                    <br>
-                    <span id="timeDate">载入天数...</span><span id="times">载入时分秒...</span>
-                    <br>
                     Copyright &copy; {{ site.title }} 2026
-                    <br>
-                    Theme by <a href="https://github.com/elmagnificogi/elmagnificogi.github.io">elmagnifico</a>
                     <br>
                     <a href="https://beian.miit.gov.cn" target="_blank" rel="noopener noreferrer">蜀ICP备2025169075号-1</a>
                 </p>
@@ -191,43 +184,6 @@
     watermark.set('To be continued...未完待续',320,280,"23px Brush Script MT")
 </script>
 {% endif %}
-
-<!-- 不蒜子统计 -->
-<script defer src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-
-<!-- 运行时间统计 -->
-<script>
-    var now = new Date();
-    var getStatistics = false;
-    var changeDone = false;
-    function createtime() {
-        var grt= new Date("01/01/2026 00:00:00");
-        now.setTime(now.getTime()+250);
-        days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days);
-        hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours);
-        if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum);
-        mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;}
-        seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
-        snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;}
-        document.getElementById("timeDate").innerHTML = "本站已运行 "+dnum+" 天 ";
-        document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒";
-        // 补充统计
-        if(!getStatistics && ""!=document.getElementById("busuanzi_value_site_uv").innerHTML){getStatistics = true;}
-        if(getStatistics && !changeDone) {
-            site_pv = document.getElementById("busuanzi_value_site_pv").innerHTML;
-            site_uv = document.getElementById("busuanzi_value_site_uv").innerHTML;
-            site_pv_num = parseInt(site_pv,10) + 572573;
-            site_uv_num = parseInt(site_uv,10) + 490731;
-            document.getElementById("fix_site_pv").innerHTML = site_pv_num;
-            document.getElementById("fix_site_uv").innerHTML = site_uv_num;
-            changeDone = true;
-        }
-    }
-    createtime();
-    {% if site.dynamic-time %} 
-    setInterval("createtime()",1000);
-    {% endif %}
-</script>
 
 <!-- back-top -->
 <script type="module">
