@@ -1,6 +1,6 @@
 # Site settings
-title: Elmagnifico's Blog
-SEOTitle: elmagnifico's blog
+title: 24's Blog
+SEOTitle: 24's blog
 header-img: "img/home-bg.jpg"
 email: elmagnificogg@gmail.com
 description: "后端与嵌入式、maya与游戏 | elmagnifico， Back-end engineer & Embedded System Lover | 这里是elmagnifico的个人博客，君子之交淡如水。"
@@ -18,7 +18,6 @@ github_username:     elmagnificogi
 #twitter_username:   elmagnificotw
 #facebook_username:  magnificofa.el
 qq_username:         363562671
-telegram_username:   elmagnificote
 steam_username:      elmagnificost
 
 # Build settings

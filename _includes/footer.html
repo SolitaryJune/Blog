@@ -84,16 +84,6 @@
                         </a>
                     </li>
                     {% endif %}
-                    {% if site.telegram_username %}
-                    <li>
-                        <a target="_blank" href="https://t.me/{{ site.telegram_username }}">
-                                    <span class="fa-stack fa-lg">
-                                        <i class="fa fa-circle fa-stack-2x"></i>
-                                        <i class="fa fa-telegram fa-stack-1x fa-inverse"></i>
-                                    </span>
-                        </a>
-                    </li>
-                    {% endif %}
                     {% if site.steam_username %}
                     <li>
                         <a target="_blank" href="https://steamcommunity.com/id/{{ site.steam_username }}">
@@ -112,9 +102,11 @@
                     <br>
                     <span id="timeDate">载入天数...</span><span id="times">载入时分秒...</span>
                     <br>
-                    Copyright &copy; {{ site.title }} {{ site.time | date: '%Y' }}
+                    Copyright &copy; {{ site.title }} 2026
                     <br>
                     Theme by <a href="https://github.com/elmagnificogi/elmagnificogi.github.io">elmagnifico</a>
+                    <br>
+                    <a href="https://beian.miit.gov.cn" target="_blank" rel="noopener noreferrer">蜀ICP备2025169075号-1</a>
                 </p>
             </div>
         </div>
@@ -209,7 +201,7 @@
     var getStatistics = false;
     var changeDone = false;
     function createtime() {
-        var grt= new Date("01/11/2015 20:01:26");
+        var grt= new Date("01/01/2026 00:00:00");
         now.setTime(now.getTime()+250);
         days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days);
         hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours);
